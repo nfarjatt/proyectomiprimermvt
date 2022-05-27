@@ -1,2 +1,9 @@
-Hola soy {{about.nombre}} y mido {{about.altura}} y tengo {{about.calcular_edad}} años.
-
+{% if personas %}
+    {% for p in personas %}
+        <div>
+            Hola soy <b>{{ p.nombre }}</b> y mido {{ p.altura }} y tengo {{ p.calcular_edad }} años.
+        </div>
+    {% endfor %}
+{% else %}
+    <div>No hay registros</div>
+{% endif %}
